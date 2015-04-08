@@ -8,8 +8,8 @@
   },
   "dependencies" : {
     "nano" : "",
-    "yargs" : ""
+    "yargs" : "",
+    "fs-extra": ""
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Svetlozar Argirov <zarrro@gmail.com>",
 }
