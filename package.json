@@ -1,15 +1,20 @@
 {
   "name": "couchtool",
   "version": "0.1.0",
-  "description": "CouchDB dump/restore/etc.",
+  "description": "CouchDB dump/restore",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "echo '#!/usr/bin/env node' > bin/couchtool.js ; coffee -p -b -c couchtool.coffee >>  bin/couchtool.js"
   },
-  "dependencies" : {
-    "nano" : "",
-    "yargs" : "",
-    "fs-extra": ""
+  "dependencies": {
+    "JSONStream": "^1.1.1",
+    "filesize": "^3.2.1",
+    "fs-extra": "",
+    "request": "^2.69.0",
+    "yargs": ""
   },
   "author": "Svetlozar Argirov <zarrro@gmail.com>",
+  "bin": {
+    "couchtool": "bin/couchtool.js"
+  }
 }
